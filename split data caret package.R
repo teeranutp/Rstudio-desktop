@@ -6,7 +6,11 @@ library(mlbench)
 data(Sonar)
 tibble(Sonar)
 
-#split data
+Sonar %>%
+  select(Class)
+
+
+#Split data
 set.seed(99)
 train_id <- createDataPartition(
   Sonar$Class,
